@@ -1,3 +1,5 @@
+import javax.sound.sampled.*;
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -46,13 +48,63 @@ public class Kayttoliittyma {
 
                     if (kysymykset == 4) break;
 
-                    if (vastaus.equals(kysymys.getOikeaVastaus())) pisteet++;
+                    if (vastaus.equals(kysymys.getOikeaVastaus())) {
+                        playSound();
+                        pisteet++;
+                    }
 
-                    else if (pisteet > 0 && vastaus.length() > 0) pisteet -= 1;
+                    else if (pisteet > 0 && vastaus.length() > 0) {
+                        playSoundIncorrect();
+                        pisteet -= 1;
+                    }
 
                     else if (vastaus.isEmpty()) continue;
                 }
-
+            playSoundIncorrect();
                 System.out.println("Pisteet: " + pisteet + "/" + kysymykset);
             }
+
+
+
+
+    public void playSound() {
+
+        try {
+            File yourFile = new File("Oikein.wav");
+            AudioInputStream stream;
+            AudioFormat format;
+            DataLine.Info info;
+            Clip clip;
+
+            stream = AudioSystem.getAudioInputStream(yourFile);
+            format = stream.getFormat();
+            info = new DataLine.Info(Clip.class, format);
+            clip = (Clip) AudioSystem.getLine(info);
+            clip.open(stream);
+            clip.start();
+        } catch (Exception e) {
+            //whatevers
+        }
+    }
+
+
+    public void playSoundIncorrect() {
+
+        try {
+            File yourFile = new File("Väärin.wav");
+            AudioInputStream stream;
+            AudioFormat format;
+            DataLine.Info info;
+            Clip clip;
+
+            stream = AudioSystem.getAudioInputStream(yourFile);
+            format = stream.getFormat();
+            info = new DataLine.Info(Clip.class, format);
+            clip = (Clip) AudioSystem.getLine(info);
+            clip.open(stream);
+            clip.start();
+        } catch (Exception e) {
+            //whatevers
+        }
+    }
         }

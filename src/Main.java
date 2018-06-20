@@ -7,9 +7,16 @@ public class Main {
 
         Scanner lukija = new Scanner(System.in);
         System.out.println("Mitä pelataan?");
-        System.out.println("Kallen peli, Reijan Peli vai Joonaksen peli?");
+        System.out.println("Kallen peliä, Reijan Peliä vai Joonaksen peliä?");
 
-        String sana = lukija.nextLine();
+        while (true) {
+            System.out.println("Syötä käsky.");
+            String sana = lukija.nextLine();
+            if (sana.equals("lopeta tämä hulluus")) {
+                System.out.println("Olet vapaa!");
+                break;
+            }
+
 
             if (sana.equals("Kallen peli")) {
                 Tekstikayttoliittyma t = new Tekstikayttoliittyma();
@@ -24,6 +31,10 @@ public class Main {
                 KayttoliittymaR r = new KayttoliittymaR();
                 r.kaynnista();
             }
+            System.out.println("Peli päättyi. Siirry seuraavan kirjoittamalla pelin nimi. Kirjoittamalla 'lopeta tämä hulluus' lopetat tämän hulluuden");
+
+        }
+
         }
 
     }
