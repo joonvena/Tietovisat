@@ -10,7 +10,7 @@ public class Kysymystenlukija {
 
     public List<kysymykset.Kysymys> kysymyslista() {
         ArrayList<kysymykset.Kysymys> kysymykset = new ArrayList<>();
-        try (Scanner tiedostonLukija = new Scanner(new File("kysymykset.txt"))) {
+        try (Scanner tiedostonLukija = new Scanner(new File("kysymyksetR.txt"))) {
             while (tiedostonLukija.hasNextLine()) {
                 String kysymys = tiedostonLukija.nextLine();
                 List<String> vastausvaihtoehdot = new ArrayList<>();
