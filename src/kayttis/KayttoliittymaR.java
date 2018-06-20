@@ -7,11 +7,11 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
-public class Kayttoliittyma {
+public class KayttoliittymaR {
     private List<KysymysR> kysymykset;
 
 
-    public Kayttoliittyma() {
+    public KayttoliittymaR() {
 //        this.kysymykset = new KysymystenlukijaR();
     }
 

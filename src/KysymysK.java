@@ -1,9 +1,9 @@
-public class Kysymys {
+public class KysymysK {
     private String kysymys;
     private String vastaus;
 
 
-    public Kysymys(String kysymys, String vastaus) {
+    public KysymysK(String kysymys, String vastaus) {
         this.kysymys = kysymys;
         this.vastaus = vastaus;
     }

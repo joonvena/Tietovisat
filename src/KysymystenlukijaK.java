@@ -6,17 +6,17 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class Kysymystenlukija {
+public class KysymystenlukijaK {
     private List kysymyslista;
 
-    public Kysymystenlukija() {
+    public KysymystenlukijaK() {
         this.kysymyslista = this.luekysymykset();
     }
 
 
     public List luekysymykset() {
         String tulos = null;
-        List <Kysymys> kysymyset = new ArrayList<>();
+        List <KysymysK> kysymyset = new ArrayList<>();
         List <String> kyssarit = new ArrayList<>();
         List <String> vastaukset = new ArrayList<>();
         try (FileReader fr = new FileReader("Kysymykset.txt"); BufferedReader in = new BufferedReader(fr)) {
@@ -35,7 +35,7 @@ public class Kysymystenlukija {
                 }
             }
             for (int x = 0; x < kyssarit.size(); x++) {
-                kysymyset.add(new Kysymys(kyssarit.get(x), vastaukset.get(x)));
+                kysymyset.add(new KysymysK(kyssarit.get(x), vastaukset.get(x)));
             }
             Collections.shuffle(kysymyset);
             return kysymyset;

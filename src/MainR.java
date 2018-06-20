@@ -1,37 +1,36 @@
 
-import kayttis.Kayttoliittyma;
-import kysymykset.Kysymys;
-import kysymykset.Kysymystenlukija;
+import kayttis.KayttoliittymaR;
+import kysymykset.KysymysR;
+import kysymykset.KysymystenlukijaR;
 
-import java.util.ArrayList;
 import java.util.List;
 
-public class Main {
+public class MainR {
 
     public static void main(String[] args) {
-        Kysymystenlukija kys = new Kysymystenlukija();
-        List<Kysymys> kysymykset = kys.kysymyslista();
-        Kayttoliittyma kl = new Kayttoliittyma();
+        KysymystenlukijaR kys = new KysymystenlukijaR();
+        List<KysymysR> kysymykset = kys.kysymyslista();
+        KayttoliittymaR kl = new KayttoliittymaR();
         kl.kaynnista();
     }
 }
 
 //import java.util.Scanner;
 
-//public class Main {
+//public class MainR {
 //    public static void main(String[] args) {
 //		Scanner lukija = new Scanner(System.in);
 //		System.out.println("Mitä pelataan?");
 //		String mitapelataan = lukija.nextLine();
 //		if(mitapelataan.equals("Kallen peli")) {
-//        Tekstikayttoliittyma t = new Tekstikayttoliittyma();
+//        TekstikayttoliittymaK t = new TekstikayttoliittymaK();
 //        t.kaynnista();
 //		}
 //		if(mitapelataan.equals("Joonaksen peli")) {
 //			//käynnistä Joonaksen peli
 //		}
 //		if(mitapelataan.equals("Reijan peli")) {
-//        Kayttoliittyma kl = new Kayttoliittyma();
+//        KayttoliittymaR kl = new KayttoliittymaR();
 //        kl.kaynnista();
 //		}
 

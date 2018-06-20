@@ -6,10 +6,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
-public class Kysymystenlukija {
+public class KysymystenlukijaR {
     private List kysymykset;
     
-    public Kysymystenlukija() {
+    public KysymystenlukijaR() {
         this.kysymykset = this.kysymyslista();
     }
 

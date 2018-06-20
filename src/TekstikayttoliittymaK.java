@@ -3,11 +3,11 @@ import java.util.Scanner;
 import java.io.*;
 import javax.sound.sampled.*;
 
-public class Tekstikayttoliittyma {
-    private Kysymystenlukija kysymykset;
+public class TekstikayttoliittymaK {
+    private KysymystenlukijaK kysymykset;
 
-    public Tekstikayttoliittyma() {
-        this.kysymykset = new Kysymystenlukija();
+    public TekstikayttoliittymaK() {
+        this.kysymykset = new KysymystenlukijaK();
     }
 
     public void kaynnista() {
@@ -15,9 +15,9 @@ public class Tekstikayttoliittyma {
         System.out.println("Tervetuloa peliin! Kysymme 10 kysymystä ja näihin voi sitten kai vastata. 'Ei jags' lopettaa. Vastaa 'Ok' jatkaaksesi");
         String komento = lukija.nextLine();
         System.out.println("Peli alkaa, ensimmäinen kysymys:");
-        Kysymystenlukija k = new Kysymystenlukija();
+        KysymystenlukijaK k = new KysymystenlukijaK();
         List kysymykset = k.luekysymykset();
-        Kysymys testi = (Kysymys) kysymykset.get(2);
+        KysymysK testi = (KysymysK) kysymykset.get(2);
         int oikeat = 0;
 
         while (true) {
@@ -25,7 +25,7 @@ public class Tekstikayttoliittyma {
                 break;
             }
             for (int i = 0; i < 10; i++) {
-                Kysymys t = (Kysymys) kysymykset.get(i);
+                KysymysK t = (KysymysK) kysymykset.get(i);
                 System.out.println(t.getKysymys());
                 String lukijanvastaus = lukija.nextLine();
                 if (lukijanvastaus.equals("Ei jags")) {

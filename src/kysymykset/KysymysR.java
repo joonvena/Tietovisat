@@ -2,12 +2,12 @@ package kysymykset;
 
 import java.util.List;
 
-public class Kysymys {
+public class KysymysR {
     private String kysymysteksti;
     private List<String> vastausvaihtoehdot;
     private int oikeanVaihtoehdonIndeksi;
 
-    public Kysymys(String kysymysteksti, List<String> vastausvaihtoehdot, int oikeanVaihtoehdonIndeksi) {
+    public KysymysR(String kysymysteksti, List<String> vastausvaihtoehdot, int oikeanVaihtoehdonIndeksi) {
             this.kysymysteksti = kysymysteksti;
             this.vastausvaihtoehdot = vastausvaihtoehdot;
             this.oikeanVaihtoehdonIndeksi = oikeanVaihtoehdonIndeksi;
