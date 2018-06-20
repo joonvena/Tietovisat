@@ -13,6 +13,8 @@ public class Main {
 			//käynnistä Joonaksen peli
 		}
 		if(mitapelataan.equals("Reijan peli")) {
+			kayttoliittyma kl = new kayttoliittyma();
+			kl.kaynnista();
 			
 		}
 
