@@ -15,5 +15,9 @@ public class Main {
             Kayttoliittyma j = new Kayttoliittyma();
             j.kaynnista();
         }
+		if (sana.equals("Reijan peli")) {
+			KayttoliittymaR r = new KayttoliittymaR();
+			r.kaynnista();
     }
+	
 }
