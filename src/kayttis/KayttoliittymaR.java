@@ -1,28 +1,31 @@
 package kayttis;
 
-import kysymykset.Kysymys;
+import kysymykset.KysymysR;
+import kysymykset.KysymystenlukijaR;
 
 import java.util.Collections;
 import java.util.List;
 import java.util.Scanner;
 
 public class Kayttoliittyma {
-    private List<Kysymys> kysymykset;
+    private List<KysymysR> kysymykset;
 
 
-    public Kayttoliittyma(List<Kysymys> kysymykset) {
-        this.kysymykset = kysymykset;
+    public Kayttoliittyma() {
+//        this.kysymykset = new KysymystenlukijaR();
     }
 
     public void kaynnista() {
         Scanner lukija = new Scanner(System.in);
-        Collections.shuffle(this.kysymykset);
-        List<Kysymys> kysyttavat = this.kysymykset;
+        KysymystenlukijaR kb = new KysymystenlukijaR();
+        List<KysymysR> kysyttavat = kb.kysymyslista();
+        Collections.shuffle(kysyttavat);
+        
         kysyttavat.remove(kysyttavat.size() - 1);
         int oikein = 0;
         int vaarin = 0;
         System.out.println("Testaa Suomi-tietoutesi!\n");
-        for (Kysymys k : kysymykset) {
+        for (KysymysR k : kysyttavat) {
             System.out.println(k.getKysymysteksti());
             List<String> vastaukset = k.getVastausvaihtoehdot();
             for (int i = 0; i < 3; i++) {

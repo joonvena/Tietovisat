@@ -8,7 +8,6 @@ public class Tekstikayttoliittyma {
 
     public Tekstikayttoliittyma() {
         this.kysymykset = new Kysymystenlukija();
-
     }
 
     public void kaynnista() {
