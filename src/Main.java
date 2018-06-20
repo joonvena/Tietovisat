@@ -6,14 +6,19 @@ public class Main {
 		System.out.println("Mitä pelataan?");
 		String mitapelataan = lukija.nextLine();
 		if(mitapelataan.equals("Kallen peli")) {
-        Tekstikayttoliittyma t = new Tekstikayttoliittyma();
-        t.kaynnista();
+        WILDCARD n = new WILDCARD();
+        n.kaynnista();
 		}
 		if(mitapelataan.equals("Joonaksen peli")) {
-			//käynnistä Joonaksen peli
+			WILDCARD n = new WILDCARD();
+			n.kaynnista();
 		}
 		if(mitapelataan.equals("Reijan peli")) {
-			
+			WILDCARD n = new WILDCARD();
+			n.kaynnista();
+		} else {
+			WILDCARD n = new WILDCARD();
+			n.kaynnista();
 		}
 
     }
